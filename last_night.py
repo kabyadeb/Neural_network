@@ -24,7 +24,7 @@ def polynomial(x):
 def data_process():
     n=1000
     x=np.random.randint(0,1000,n).reshape(-1,1)
-    x=x/1000.0
+    x=x/1000.0 # divided by max value 
     y=np.array([polynomial(i) for i in x])
     y=y.reshape(-1,1)/(1000**4)
     return x,y
